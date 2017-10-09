@@ -1,7 +1,7 @@
 version: '3'
 services:
   official:
-    image: samurai
+    image: makotookamura/samurai17
     volumes:
       - ./data:/samurai
     tty: true
