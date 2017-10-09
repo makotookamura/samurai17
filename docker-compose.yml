@@ -1,0 +1,7 @@
+version: '3'
+services:
+  official:
+    image: samurai
+    volumes:
+      - ./data:/samurai
+    tty: true
