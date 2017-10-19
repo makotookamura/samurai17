@@ -1,7 +1,7 @@
 FROM alpine
 LABEL maintainer makotookamura
 
-RUN apk add --no-cache build-base boost-dev vim tzdata && \
+RUN apk add --no-cache build-base boost-dev vim tzdata git && \
     ln -sf /usr/local/bin/gcc-6 /usr/local/bin/gcc && \
     ln -sf /usr/local/bin/g++-6 /usr/local/bin/g++ && \
     ln -sf vim /usr/bin/vi && \

@@ -1,11 +1,9 @@
 #!bin/sh
 
 function install_samurai () {
-    wget http://samuraicoding.info/software/samurai-software-20170930.zip
-    unzip -o samurai-software-20170930.zip
-    rm samurai-software-20170930.zip
+    git clone https://github.com/SamurAI-Coding/Software2017-18/ .
     make -B -k
-    echo 'installed!!' > installed     
+    echo `date +%Y%m%d%H%M%S` > installed     
 }
 
 function create_make_players () {
