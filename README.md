@@ -7,6 +7,7 @@ samurai2017(samurai-jockey)の環境導入を支援するためのDockerコン�
 以下の人を対象にしています。
 
 * 自分でmake環境を作るのが面倒。環境依存のエラーが嫌。PC汚したくない。
+* とりあえずDockerは入れている。
 * よくわからんけど、とりあえずサンプルをいじってみようと思う。
 
 なお、以下のソースを**コンテナ構築時**に引き取っています。  
@@ -14,9 +15,15 @@ https://github.com/SamurAI-Coding/Software2017-18
 
 ## 2. Install
 
-dockerをインストールした状態で、このリポジトリをpullするかdocker-compose.ymlをローカルにコピーする。  
+dockerをインストールした状態で、このリポジトリをcloneするかdocker-compose.ymlをローカルにコピーする。  
 docker-compose.ymlのあるディレクトリで、`docker-compose up -d`を実行するとコンテナが立ち上がります。  
-初期起動時はgit cloneとmakeがあるので少し時間がかかります。
+初期起動時はgit cloneとmakeがあるので少し時間がかかります。  
+とりあえず以下を叩けばいいです。
+
+```
+git clone http://github.com/makotookamura/samurai17-dev samurai
+docker-compose up -d
+```
 
 ## 3. How to use
 
