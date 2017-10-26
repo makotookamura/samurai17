@@ -1,9 +1,10 @@
 #!bin/sh
 
 function install_samurai () {
-    git -c http.sslVerify=false clone https://github.com/SamurAI-Coding/Software2017-18/ .
+    rm -rf * .git
+    git -c http.sslVerify=false clone https://github.com/SamurAI-Coding/Software2017-18/ . && \
+    echo `date +%Y%m%d%H%M%S` > installed
     make -B -k
-    echo `date +%Y%m%d%H%M%S` > installed     
 }
 
 function create_make_players () {
@@ -30,17 +31,17 @@ if ! test -e /samurai/installed ; then
     install_samurai
 fi
 
-if ! test -e make_players.sh ; then
-    create_make_players
+if test -e installed ; then
+    if ! test -e make_players.sh ; then
+        create_make_players
+    fi
+    if ! test -e race_settings.txt ; then
+        create_race_settings
+    fi
+    mkdir -p log
+    ./make_players.sh
+    . race_settings.txt
+    official/official $COURSE $AI1 $AI1_NAME $AI2 $AI2_NAME $LOG1 $LOG2 > $RACELOG
 fi
-
-if ! test -e race_settings.txt ; then
-    create_race_settings
-fi
-
-mkdir -p log
-./make_players.sh
-. race_settings.txt
-official/official $COURSE $AI1 $AI1_NAME $AI2 $AI2_NAME $LOG1 $LOG2 > $RACELOG
 
 /bin/sh
