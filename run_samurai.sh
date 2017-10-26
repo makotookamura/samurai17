@@ -1,7 +1,7 @@
 #!bin/sh
 
 function install_samurai () {
-    git clone https://github.com/SamurAI-Coding/Software2017-18/ .
+    git -c http.sslVerify=false clone https://github.com/SamurAI-Coding/Software2017-18/ .
     make -B -k
     echo `date +%Y%m%d%H%M%S` > installed     
 }
