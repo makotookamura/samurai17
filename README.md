@@ -69,10 +69,10 @@ raceの開始方法は以下のような方法があります。
 
 1. コンテナを再起動する
 
-以下のコマンドでdocker-composeをリスタートすると、自動的にmakeしてraceを実行してくれます。  
+docker-compose.ymlがある場所で以下のコマンドを叩いてdocker-composeをリスタートすると、自動的にmakeしてraceを実行してくれます。  
 `docker-compose restart`
 
-コンテナ落ちたら`docker-compose up -d`です。
+コンテナ落ちたら、`docker-compose up -d`です。
 
 2. コンテナに入って直接シェルを叩く。
 
