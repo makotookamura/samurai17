@@ -38,7 +38,11 @@ container起動直後にdocker-compose.ymlのあるフォルダにdataという�
 
 ### 1. myAIを作る
 
-playerディレクトリをコピーしてmyAIという名前にして保存する。
+playerディレクトリをコピーしてmyAIという名前にして保存する。  
+```
+cd data
+cp -r player myAI
+```
 
 ### 2. myAIをmake対象に追加
 
