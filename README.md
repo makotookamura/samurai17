@@ -78,6 +78,8 @@ samuraiというフォルダにdocker-compose.ymlを置いている場合は以�
 コンテナに入ったら/samuraiにいると思うので、以下のコマンドを叩いてください。  
 `sh /run_samurai.sh`
 
+なお、抜けるときは**Ctrl+Z**です。
+
 ### 6. レース結果を見る
 
 viewerディレクトリのviewer.htmlをブラウザで開いてください。  
