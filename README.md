@@ -22,6 +22,7 @@ docker-compose.ymlのあるディレクトリで、`docker-compose up -d`を実�
 
 ```
 git clone http://github.com/makotookamura/samurai17-dev samurai
+cd samurai
 docker-compose up -d
 ```
 
