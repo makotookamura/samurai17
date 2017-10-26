@@ -1,7 +1,7 @@
 # samurai17-dev
 samurai2017の開発を支援してくれるDockerコンテナ
 
-## What's this?
+## 1. What's this?
 
 samurai2017(samurai-jockey)の環境導入を支援するためのDockerコンテナです。
 以下の人を対象にしています。
@@ -12,15 +12,15 @@ samurai2017(samurai-jockey)の環境導入を支援するためのDockerコン�
 なお、以下のソースを**コンテナ構築時**に引き取っています。  
 https://github.com/SamurAI-Coding/Software2017-18
 
-## Install
+## 2. Install
 
 dockerをインストールした状態で、このリポジトリをpullするかdocker-compose.ymlをローカルにコピーする。  
 docker-compose.ymlのあるディレクトリで、`docker-compose up -d`を実行するとコンテナが立ち上がります。  
 初期起動時はgit cloneとmakeがあるので少し時間がかかります。
 
-## How to use
+## 3. How to use
 
-### 起動直後
+### 0. コンテナ起動直後
 
 container起動直後にdocker-compose.ymlのあるフォルダにdataというディレクトリが出来ます。  
 その中にプログラムや設定ファイルなどが一式入っています。詳細はREADME-jp.txtを読んでください。
